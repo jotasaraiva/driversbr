@@ -1,6 +1,6 @@
 get_drivers_links <- function() {
   page <- "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/estatisticas-quantidade-de-habilitados-denatran"
-  
+
   xl_links <- rvest::read_html(page) |>
     rvest::html_elements(".internal-link") |>
     rvest::html_attr("href") |>
@@ -10,7 +10,7 @@ get_drivers_links <- function() {
       }
     ) |>
     unique()
-  
+
   return(xl_links)
 }
 
@@ -22,7 +22,7 @@ get_region <- function(acronyms) {
     "Sudeste" = c("ES", "MG", "RJ", "SP"),
     "Sul" = c("PR", "RS", "SC")
   )
-  
+
   region <- sapply(acronyms, function(acronym) {
     for (r in names(region_map)) {
       if (acronym %in% region_map[[r]]) {
@@ -31,7 +31,7 @@ get_region <- function(acronyms) {
     }
     return("Not found")
   })
-  
+
   return(region)
 }
 
@@ -49,7 +49,7 @@ brazil_states_acronym <- function(df) {
       "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
     )
   )
-  
+
   for(i in 1:length(df$uf)) {
     for(j in 1:length(brazil_states_df$State)) {
       if(df$uf[i] == brazil_states_df$State[j] & !is.na(df$uf[i])) {
@@ -57,7 +57,7 @@ brazil_states_acronym <- function(df) {
       }
     }
   }
-  
+
   return(df)
 }
 
@@ -65,7 +65,7 @@ brazil_states_acronym <- function(df) {
 read_drivers_url <- function(url) {
   temp <- tempfile(fileext = ".xlsx")
   utils::download.file(url, temp, mode = "wb", quiet = T)
-  
+
   suppressMessages({
     df <-
       readxl::read_excel(
@@ -85,8 +85,8 @@ read_drivers_url <- function(url) {
       dplyr::mutate(faixa_etaria = forcats::as_factor(.data$faixa_etaria)) |>
       brazil_states_acronym()
   })
-  
+
   unlink(temp)
-  
+
   return(df)
 }
