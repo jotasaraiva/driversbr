@@ -1,25 +1,28 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# driversbr
+# driversbr <a href="https://jotasaraiva.github.io/driversbr/"><img src="man/figures/logo.png" align="right" height="139" alt="driversbr website" /></a>
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/jotasaraiva/driversbr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jotasaraiva/driversbr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The `driversbr` is a data package that provides a licensed drivers
-dataset from the Brazilian Ministry of Transport.
+This package is a data source that provides a licensed drivers dataset
+from the Brazilian Ministry of Transport.
 
 ## Installation
 
-You can install the development version of driversbr like so:
+You can install the development version of `driversbr` from Github:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+devtools::install_github("jotasaraiva/driversbr")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example of the data provided:
 
 ``` r
 library(driversbr)
@@ -49,14 +52,15 @@ citation("driversbr")
 #> To cite package 'driversbr' in publications use:
 #> 
 #>   Saraiva JPM, Santos PAB (????). _driversbr: Licensed drivers data
-#>   from the Brazilian Ministry of Transport_. R package version
-#>   0.0.0.9000.
+#>   from the Brazilian Ministry of Transport_.
+#>   https://github.com/jotasaraiva/driversbr,
+#>   https://jotasaraiva.github.io/driversbr/.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {driversbr: Licensed drivers data from the Brazilian Ministry of Transport},
 #>     author = {João Pedro Melani Saraiva and Pedro Augusto Borges Santos},
-#>     note = {R package version 0.0.0.9000},
+#>     note = {https://github.com/jotasaraiva/driversbr, https://jotasaraiva.github.io/driversbr/},
 #>   }
 ```

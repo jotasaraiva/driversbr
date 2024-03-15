@@ -1,0 +1,35 @@
+---
+title: "Get started"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{driversbr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`driversbr` loads a `tibble` dataset with 106,078 rows and 7 columns:
+
+```{r setup}
+library(driversbr)
+library(dplyr)
+```
+
+```{r}
+# grouping and translating
+grouped_drivers <-
+  drivers |> 
+  summarise(.by = ano, x = sum(condutores, na.rm = T)) |> 
+  rename(year = ano, drivers = x)
+
+# plotting
+plot(grouped_drivers$year, grouped_drivers$drivers,
+     xlab = "Year", ylab = "Amount of Drivers")
+```
+

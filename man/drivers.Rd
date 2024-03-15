@@ -10,7 +10,7 @@
 A \code{tibble} data frame encoded to Brazilian Portuguese:
 \describe{
 \item{regiao}{Brazilian Geographic Region}
-\item{uf}{Federativa Unit - Brazilian States Acronym}
+\item{uf}{Federative Unit - Brazilian States Acronym}
 \item{sexo}{Drivers sex}
 \item{faixa_etaria}{Drivers age group}
 \item{ano}{Year}
