@@ -47,11 +47,9 @@ This package can be cited as follows:
 
 ``` r
 citation("driversbr")
-#> Warning in citation("driversbr"): could not determine year for 'driversbr' from
-#> package DESCRIPTION file
 #> To cite package 'driversbr' in publications use:
 #> 
-#>   Saraiva JPM, Santos PAB (????). _driversbr: Licensed drivers data
+#>   Saraiva JPM, Santos PAB (2024). _driversbr: Licensed drivers data
 #>   from the Brazilian Ministry of Transport_.
 #>   https://github.com/jotasaraiva/driversbr,
 #>   https://jotasaraiva.github.io/driversbr/.
@@ -61,6 +59,7 @@ citation("driversbr")
 #>   @Manual{,
 #>     title = {driversbr: Licensed drivers data from the Brazilian Ministry of Transport},
 #>     author = {João Pedro Melani Saraiva and Pedro Augusto Borges Santos},
+#>     year = {2024},
 #>     note = {https://github.com/jotasaraiva/driversbr, https://jotasaraiva.github.io/driversbr/},
 #>   }
 ```
