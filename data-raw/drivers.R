@@ -6,7 +6,7 @@ get_drivers_links <- function() {
     rvest::html_attr("href") |>
     Filter(
       f = function(l) {
-        grepl("condutores.*12",l) & tools::file_ext(l) %in% c("xls","xlsx")
+        grepl("condutores.*(12|Dezembro)",l) & tools::file_ext(l) %in% c("xls","xlsx")
       }
     ) |>
     unique()
