@@ -1,6 +1,6 @@
 Package: driversbr
 Title: Licensed drivers data from the Brazilian Ministry of Transport
-Version: 0.1.0
+Version: 0.2.0
 Date: 2024-03-15
 Authors@R: 
   c(person(
