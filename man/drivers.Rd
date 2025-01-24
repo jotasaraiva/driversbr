@@ -3,11 +3,9 @@
 \docType{data}
 \name{drivers}
 \alias{drivers}
-\title{Brazilian Licensed Drivers Data}
+\title{Licensed Drivers Data}
 \format{
-\subsection{\code{drivers}}{
-
-A \code{tibble} data frame encoded to Brazilian Portuguese:
+A tibble with 114,492 rows and 7 variables:
 \describe{
 \item{regiao}{Brazilian Geographic Region}
 \item{uf}{Federative Unit - Brazilian States Acronym}
@@ -18,15 +16,14 @@ A \code{tibble} data frame encoded to Brazilian Portuguese:
 \item{condutores}{Amount of drivers}
 }
 }
-}
 \source{
-https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/estatisticas-quantidade-de-habilitados-denatran
+\url{https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/estatisticas-quantidade-de-habilitados-denatran}
 }
 \usage{
 drivers
 }
 \description{
 A dataset of licensed drivers data scraped from the
-Brazilian Ministry of Transport
+Brazilian Ministry of Transport.
 }
 \keyword{datasets}
